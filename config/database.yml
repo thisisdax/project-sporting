@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: project3-sporting_development
+  database: sporting_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: project3-sporting_test
+  database: sporting_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: project3-sporting_production
-  username: project3-sporting
-  password: <%= ENV['PROJECT3-SPORTING_DATABASE_PASSWORD'] %>
+  database: sporting_production
+  username: sporting
+  password: <%= ENV['SPORTING_DATABASE_PASSWORD'] %>
