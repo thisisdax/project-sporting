@@ -8,5 +8,6 @@ class User < ApplicationRecord
  has_many :followers, :through => :following
  has_many :attendings
  has_many :events, :through => :attendings
+ has_many :comments, dependent: :destroy
 
 end
