@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
     t.string     :name
     t.text       :description
     t.string     :location
-    t.string     :type
+    t.string     :type_of_sport
     t.date       :date
     t.time       :time
     t.time       :duration

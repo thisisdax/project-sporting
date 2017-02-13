@@ -44,14 +44,14 @@ ActiveRecord::Schema.define(version: 20170213072857) do
     t.string   "name"
     t.text     "description"
     t.string   "location"
-    t.string   "type"
+    t.string   "type_of_sport"
     t.date     "date"
     t.time     "time"
     t.time     "duration"
     t.integer  "minpax"
     t.integer  "maxpax"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 20170213072857) do
     t.string   "name"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "username"
     t.integer  "min_age"
     t.string   "gender"
     t.string   "provider"

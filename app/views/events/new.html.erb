@@ -1,6 +1,5 @@
 <h1>Events#new</h1>
 <p>Find me in app/views/events/new.html.erb</p>
-<%= :event %>
 <%= form_for :event, url: events_path do |p| %>
 
   <p>
@@ -19,8 +18,8 @@
   </p>
 
   <p>
-    <%= p.label :type %><br>
-    <%= p.text_area :type %>
+    <%= p.label :type_of_sport %><br>
+    <%= p.text_area :type_of_sport %>
   </p>
 
   <p>
