@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
+  # before_action :list_attending, only: [:index]
   def index
     @events = Event.all
+
   end
 
   def new
@@ -13,7 +15,7 @@ class EventsController < ApplicationController
     @event.user_id = current_user.id
     if @event.save
       flash[:success] = "Event created successfully!"
-      redirect_to events_path
+      redirect_to join_event_path(@event.id)
     else
       flash[:danger] = "There was an error creating the event."
       render :new
@@ -29,4 +31,7 @@ class EventsController < ApplicationController
     params.require(:event).permit(:user_id, :name, :description, :location, :type_of_sport, :date, :time, :duration, :minpax, :maxpax)
   end
 
+  # def list_attending
+  #   @list = Attending.find_by_user_id(current_user.id)
+  # end
 end

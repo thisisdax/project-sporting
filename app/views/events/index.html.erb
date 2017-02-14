@@ -34,9 +34,19 @@
                           <p> Date: <%= value.date.to_formatted_s(:long) %> </p>
                           <p> Time: <%= value.time.to_formatted_s(:time) %> </p>
                           <p> Location: <%= value.location %> </p>
-                          <p>
-                              <a href="" class="btn btn-primary">Join Now!</a> <%= link_to "More Info", event_path(value), { :class=>"btn btn-default" } %>
-                          </p>
+                          <% counter = 0 %>
+                          <% if value.attendings.length == 0 %>
+                            <%= link_to "Join Now!", join_event_path(value), :method=> :post, :class=>"btn btn-primary" %>
+                          <% end %>
+                          <% value.attendings.each_with_index do |x, y| %>
+                            <% if x.user_id == current_user.id %>
+                            <%= link_to "Leave", leave_event_path(value), :method=> :delete, :class=>"btn btn-primary" %>
+                            <% counter = 1 %>
+                            <% elsif y == value.attendings.length - 1 && counter == 0%>
+                            <%= link_to "Join Now!", join_event_path(value), :method=> :post, :class=>"btn btn-primary" %>
+                            <% end %>
+                          <% end %>
+                           <%= link_to "More Info", event_path(value), { :class=>"btn btn-default" } %>
                       </div>
                   </div>
               </div>
