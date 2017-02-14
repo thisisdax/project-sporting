@@ -1,0 +1,68 @@
+id,value,tag_category_id
+1,North,0
+2,South,0
+3,East,0
+4,West,0
+5,Ang Mo Kio,1
+6,Bedok,1
+7,Bishan,1
+8,Boon Lay,1
+9,Bukit Batok,1
+10,Bukit Merah,1
+11,Bukit Panjang,1
+12,Bukit Timah,1
+13,Changi,1
+14,Choa Chu Kang,1
+15,Clementi,1
+16,Downtown,1
+17,Geylang,1
+18,Hougang,1
+19,Jurong East,1
+20,Jurong West,1
+21,Kallang,1
+22,Lim Chu Kang,1
+23,Mandai,1
+24,Marina East,1
+25,Marina South,1
+26,Marine Parade,1
+27,Newton,1
+28,Novena,1
+29,Orchard,1
+30,Outram,1
+31,Pasir Ris,1
+32,Paya Lebar,1
+33,Pioneer,1
+34,Punggol,1
+35,Queenstown,1
+36,River Valley,1
+37,Rochor,1
+38,Seletar,1
+39,Sembawang,1
+40,Sengkang,1
+41,Serangoon,1
+42,Simpang,1
+43,Singapore River,1
+44,Sungei Kadut,1
+45,Tampines,1
+46,Tanglin,1
+47,Tengah,1
+48,Toa Payoh,1
+49,Tuas,1
+50,Woodlands,1
+51,Yishun,1
+52,Basketball,2
+53,Soccer,2
+54,Yoga,2
+55,Badminton,2
+56,Tennis,2
+57,Table-tennis,2
+58,Climbing,2
+59,Laser Tag,2
+60,Bubble Soccer,2
+61,Softball,2
+62,Beginner,3
+63,Advanced,3
+64,Intermediate,3
+65,Any,3
+66,Female,4
+67,Male,4
