@@ -35,9 +35,6 @@
                           <p> Time: <%= value.time.to_formatted_s(:time) %> </p>
                           <p> Location: <%= value.location %> </p>
                           <% counter = 0 %>
-                          <% if value.attendings.length == 0 %>
-                            <%= link_to "Join Now!", join_event_path(value), :method=> :post, :class=>"btn btn-primary" %>
-                          <% end %>
                           <% value.attendings.each_with_index do |x, y| %>
                             <% if x.user_id == current_user.id %>
                             <%= link_to "Leave", leave_event_path(value), :method=> :delete, :class=>"btn btn-primary" %>
