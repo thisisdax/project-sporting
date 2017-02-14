@@ -1,7 +1,46 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
   def index
-    @events = Event.all
+    if params[:date]
+      @events = Event.where("date >= ?", params[:date])
+    else
+      @events = Event.all
+    end
+    # @events = Event.all
+    @events_by_date = @events.group_by(&:date)
+    # ^ this will generate a hash with a key as the date of event
+    # @events.each_with_index do | value, index |
+    #   puts "*************value"
+    #   puts "#{value.date}"
+    #   if (params[:date].to_time <= value.date)
+    #     puts "show this event"
+    #   else
+    #     puts "hide this event"
+    #   end
+    # end
+      # if (params[:year].to_i < value.date.year)
+      #   puts "show this event"
+      # elsif (params[:year].to_i == value.date.year) && (params[:month].to_i < value.date.month)
+      #   puts "show this event"
+      # elsif (params[:year].to_i == value.date.year) && (params[:month].to_i == value.date.month) && (params[:day].to_i <= value.date.day)
+      #   puts "show this event"
+      # else
+      #   puts "hide this event"
+      # end
+      # puts "#{value.date}"
+      # # puts "#{value.date.month.inspect}"
+      # # puts "#{value.date.day.inspect}"
+      # puts "*************"
+      # puts "*************index"
+      # puts "#{index}"
+      # puts "*************"
+    # end
+    # puts "*************params[:date]"
+    # puts "#{params[:date]}"
+    # puts "*************"
+    # puts "************* to_time"
+    # puts "#{params[:date].to_time.strftime('%Y-%m-%d')}"
+    # puts "*************"
   end
 
   def new
