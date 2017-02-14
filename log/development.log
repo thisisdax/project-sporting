@@ -16764,3 +16764,569 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 2.2ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5048.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "3_sporting_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5040.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "3_sporting_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (122.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "3_sporting_development"[0m
+  [1m[35m (122.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "3_sporting_test"[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(717481821603057315);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170213040518)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213040518"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToUsers (20170213040712)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "image" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "min_age" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "birthday" date[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213040712"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20170213040945)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "user_id" integer, "name" character varying, "description" text, "location" character varying, "type_of_sport" character varying, "date" date, "time" time, "duration" time, "minpax" integer, "maxpax" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213040945"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFollowings (20170213041135)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "followings" ("id" serial primary key, "user_id" integer, "follower_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213041135"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTagCategories (20170213052722)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "tag_categories" ("id" serial primary key, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213052722"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttendings (20170213053656)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "attendings" ("id" serial primary key, "user_id" integer, "event_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213053656"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20170213060740)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "value" character varying, "tag_category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1c4ed8dfc0"
+FOREIGN KEY ("tag_category_id")
+  REFERENCES "tag_categories" ("id")
+)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_tag_category_id" ON "tags"  ("tag_category_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213060740"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEventTags (20170213063901)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "event_tags" ("id" serial primary key, "tag_id" integer, "event_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170213063901"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20170214053943)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" serial primary key, "message" character varying, "event_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c6b77e33aa"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_event_id" ON "comments"  ("event_id")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170214053943"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-14 10:07:22 UTC], ["updated_at", 2017-02-14 10:07:22 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(717481821603057315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/events" for 127.0.0.1 at 2017-02-14 18:07:42 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from each_with_index at /Users/Dax/WDI/wdi-ruby/project-sporting/app/views/events/index.html.erb:23)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from each_with_index at /Users/Dax/WDI/wdi-ruby/project-sporting/app/views/events/index.html.erb:23)
+  Rendered events/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (19.7ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 614ms (Views: 578.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-14 18:07:47 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.0ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-14 18:07:55 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7KiO0j4KQ5uAVIm2Oe4H8pB5CSQ6Lp8gl5ogAAE7aQqBt6y/UPL4IlPM554ARpBcuqNP58tFy/2pHVNIIma9kQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 2.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7KiO0j4KQ5uAVIm2Oe4H8pB5CSQ6Lp8gl5ogAAE7aQqBt6y/UPL4IlPM554ARpBcuqNP58tFy/2pHVNIIma9kQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+Completed 200 OK in 280ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-02-14 18:07:57 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+  Rendered partials/_navbar.html.erb (2.0ms)
+  Rendered partials/_flash.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-02-14 18:08:27 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OpuyxzUzsRCJT0tJG5wNEZbBWtxUrbJILZgEiZeVwfZ+4AnZj6HML4vIBVQ2E4fpcloes7x3XhHHH1bknNU4tw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$nb6oRY0f.PTLRTKW4KGs5upEtGYHvClI4uzXODmuittPUfhyjHRdS"], ["created_at", 2017-02-14 10:08:27 UTC], ["updated_at", 2017-02-14 10:08:27 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-02-14 10:08:27 UTC], ["last_sign_in_at", 2017-02-14 10:08:27 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-02-14 10:08:27 UTC], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-14 18:08:27 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (4.4ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-14 18:08:38 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (4.5ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-02-14 18:08:46 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (20.7ms)
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.4ms)
+Started GET "/" for 127.0.0.1 at 2017-02-14 18:08:48 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (5.1ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-14 18:08:54 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (4.2ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-02-14 18:09:03 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (5.1ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-02-14 18:09:09 +0800
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (10.0ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+Completed 200 OK in 66ms (Views: 50.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-02-14 18:09:45 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bOTzRKbU6M3TEOSssPGu6nwel9oo9w6vzYm3dwVM8Bz+nEtKHotE5jaPmGlvwHL8/oTtpF+jqj0ugFFiZVDoyg==", "event"=>{"name"=>"Barbeque", "location"=>"Home", "type_of_sport"=>"Hockey", "date"=>"1992-09-09", "time"=>"09:09", "duration"=>"2 Hours", "minpax"=>"2", "maxpax"=>"2", "description"=>"hello"}, "commit"=>"Save Event"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "events" ("user_id", "name", "description", "location", "type_of_sport", "date", "time", "duration", "minpax", "maxpax", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 1], ["name", "Barbeque"], ["description", "hello"], ["location", "Home"], ["type_of_sport", "Hockey"], ["date", Wed, 09 Sep 1992], ["time", 2000-01-01 09:09:00 UTC], ["duration", 2000-01-01 02:00:00 UTC], ["minpax", 2], ["maxpax", 2], ["created_at", 2017-02-14 10:09:45 UTC], ["updated_at", 2017-02-14 10:09:45 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1/join
+Completed 302 Found in 15ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/events/1/join" for 127.0.0.1 at 2017-02-14 18:09:45 +0800
+Processing by AttendingsController#redirection as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttending Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "attendings" WHERE "attendings"."user_id" = $1 AND "attendings"."event_id" = $2 LIMIT $3[0m  [["user_id", 1], ["event_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "attendings" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["event_id", 1], ["created_at", 2017-02-14 10:09:45 UTC], ["updated_at", 2017-02-14 10:09:45 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Filter chain halted as :join rendered or redirected
+Completed 302 Found in 59ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-02-14 18:09:45 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mAttending Load (0.4ms)[0m  [1m[34mSELECT "attendings".* FROM "attendings" WHERE "attendings"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/index.html.erb within layouts/application (18.7ms)
+  Rendered partials/_navbar.html.erb (1.3ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-02-14 18:09:48 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 ORDER BY created_at DESC[0m
+  Rendered comments/_form.html.erb (15.5ms)
+  Rendered comments/_comment.html.erb (25.1ms)
+  Rendered events/show.html.erb within layouts/application (27.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (3.3ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 65.3ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/events/1/comments" for 127.0.0.1 at 2017-02-14 18:10:07 +0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4hG7Wz1DlO602L0D5lmvgFSzWez9zpz9KenavOWS9+YT1vXPNF0HToFwgrd3mwBNLeThnzTzOhjUysTqyZEag==", "comment"=>{"message"=>"hallow\r\n"}, "commit"=>"Create Comment", "event_id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "comments" ("message", "event_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hallow\r\n"], ["event_id", 1], ["user_id", 1], ["created_at", 2017-02-14 10:10:07 UTC], ["updated_at", 2017-02-14 10:10:07 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 23ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-02-14 18:10:07 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (2.4ms)
+  Rendered comments/_comment.html.erb (12.7ms)
+  Rendered events/show.html.erb within layouts/application (15.7ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 48.3ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/events/1/comments/1" for 127.0.0.1 at 2017-02-14 18:10:11 +0800
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mc6dJP1qFmcP8/0Yt55BanRvGkPjPyuYNMWCdI+c9s0LtiUqRTW6TOpsgd1or5189vVgPZRrjwrXzGRh74DuGw==", "event_id"=>"1", "id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."event_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["event_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 10ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-02-14 18:10:12 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 ORDER BY created_at DESC[0m
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered comments/_comment.html.erb (6.6ms)
+  Rendered events/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (4.0ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/events/1/comments" for 127.0.0.1 at 2017-02-14 18:10:15 +0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ttA4zTO02qncYdBkKTldDWXvUtiWDtAc6Lwli9fm9UYkqIDDi+t2gjn+rKH2CIEb53UopuFadI4LtcOet/rtkA==", "comment"=>{"message"=>"boom\r\n"}, "commit"=>"Create Comment", "event_id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("message", "event_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "boom\r\n"], ["event_id", 1], ["user_id", 1], ["created_at", 2017-02-14 10:10:15 UTC], ["updated_at", 2017-02-14 10:10:15 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 20ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-02-14 18:10:15 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered comments/_comment.html.erb (12.6ms)
+  Rendered events/show.html.erb within layouts/application (15.1ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/1/comments/2/edit" for 127.0.0.1 at 2017-02-14 18:10:17 +0800
+Processing by CommentsController#edit as HTML
+  Parameters: {"event_id"=>"1", "id"=>"2"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."event_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["event_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/edit.html.erb within layouts/application (1.6ms)
+  Rendered partials/_navbar.html.erb (1.3ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 39.4ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/events/1/comments/2" for 127.0.0.1 at 2017-02-14 18:10:20 +0800
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lLdJCOm7t72iHw5ckxLfJq+sjZAuvzyBgthSSQ3/qQ59DpI3LiskmSSgtkKHwMef1zNk4aBs4OoimU8/pfQLmw==", "comment"=>{"message"=>"hehehe"}, "commit"=>"Update Comment", "event_id"=>"1", "id"=>"2"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."event_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["event_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "comments" SET "message" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["message", "hehehe"], ["updated_at", 2017-02-14 10:10:20 UTC], ["id", 2]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 17ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-02-14 18:10:20 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered comments/_comment.html.erb (11.6ms)
+  Rendered events/show.html.erb within layouts/application (14.1ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 51.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/events/index.html" for 127.0.0.1 at 2017-02-14 18:10:45 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:         <p><a href="#">Link</a></p>
+     8:       </div>
+     9:       <div class="col-sm-8 text-left">
+    10:         <h1><%= @event.name %></h1>
+    11:         <h2><%= @event.type_of_sport %></h2>
+    12:         <li>Date: <%= @event.date.to_formatted_s(:long) %></li>
+    13:         <li>Time: <%= @event.time.to_formatted_s(:time) %></li>
+  
+app/views/events/show.html.erb:10:in `_app_views_events_show_html_erb___1959337548032792742_70223476342300'
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Dax/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.8ms)
+Started GET "/events" for 127.0.0.1 at 2017-02-14 18:10:49 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mAttending Load (0.4ms)[0m  [1m[34mSELECT "attendings".* FROM "attendings" WHERE "attendings"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/index.html.erb within layouts/application (6.5ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/events/1/leave" for 127.0.0.1 at 2017-02-14 18:10:54 +0800
+Processing by AttendingsController#leave as HTML
+  Parameters: {"authenticity_token"=>"5oB/HSPruKrOYLOVjSKtq4FL7yZQccrnrolOwvPzcLJ0+McTm7QUgSv/z1BSE3G9A9GVWCclbnVNgKjXk+9oZA==", "id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttending Load (0.7ms)[0m  [1m[34mSELECT "attendings".* FROM "attendings" WHERE "attendings"."event_id" = $1 AND ("attendings"."user_id" != $2)[0m  [["event_id", 1], ["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttending Load (0.2ms)[0m  [1m[34mSELECT "attendings".* FROM "attendings" WHERE "attendings"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "attendings" WHERE "attendings"."id" = $1[0m  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-02-14 18:10:54 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partials/_navbar.html.erb (3.7ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-02-14 18:27:18 +0800
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (3.7ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
