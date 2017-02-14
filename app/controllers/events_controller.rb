@@ -14,6 +14,7 @@ class EventsController < ApplicationController
       @event.user_id = current_user.id
       if @event.save
         flash[:success] = "Event created successfully!"
+        puts "IM HEREERERERERERE"
         redirect_to events_path
       else
         flash[:error] = "There was an error creating the event."

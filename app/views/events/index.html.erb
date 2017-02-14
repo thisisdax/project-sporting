@@ -1,0 +1,8 @@
+<h1>this is events index page</h1>
+
+<% @events.each do |event| %>
+<p><b><%= event.name %></b></p>
+is created by <br>
+<p><%= event.user_id %></p>
+
+<% end %>
