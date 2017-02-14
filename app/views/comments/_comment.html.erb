@@ -1,0 +1,11 @@
+<% @comments.each do |comment| %>
+  <%= comment.user.email %> says:
+  <p><%= comment.message %></p>
+
+  <% if current_user == comment.user %>
+    <%= link_to "Delete comment", [comment.event, comment], method: :delete %>
+    <%= link_to "Edit comment", edit_event_comment_path(comment.event, comment) %><br><br>
+  <% end %>
+<% end %>
+
+<%= render 'comments/form' %>
