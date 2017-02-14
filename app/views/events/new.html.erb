@@ -1,53 +1,40 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
-<%= form_for :event, url: events_path do |p| %>
-
-  <p>
-    <%= p.label :name %><br>
-    <%= p.text_field :name %>
-  </p>
-
-  <p>
-    <%= p.label :description %><br>
-    <%= p.text_area :description %>
-  </p>
-
-  <p>
-    <%= p.label :location %><br>
-    <%= p.text_area :location %>
-  </p>
-
-  <p>
-    <%= p.label :type_of_sport %><br>
-    <%= p.text_area :type_of_sport %>
-  </p>
-
-  <p>
-    <%= p.label :date %><br>
-    <%= p.text_area :date %>
-  </p>
-
-  <p>
-    <%= p.label :time %><br>
-    <%= p.text_area :time %>
-  </p>
-
-  <p>
-    <%= p.label :duration %><br>
-    <%= p.text_area :duration %>
-  </p>
-
-  <p>
-    <%= p.label :minpax %>
-    <%= p.text_area :minpax %>
-  </p>
-
-  <p>
-    <%= p.label :maxpax %>
-    <%= p.text_area :maxpax %>
-  </p>
-
-  <p>
-    <%= p.submit %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Events#new</h1>
+    <p>Find me in app/views/events/new.html.erb</p>
+    <%= bootstrap_form_for :event, url: events_path do |p| %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= p.text_field :name, label: 'Name of Event', icon:'pencil' %>
+        </div>
+        <div class='col-md-3'>
+          <%= p.text_field :location, label: 'Location', icon: 'map-marker' %>
+        </div>
+        <div class='col-md-3'>
+          <%= p.text_field :type_of_sport, label: 'Type of Sport', icon: 'tags' %>
+        </div>
+        <div class='col-md-3'>
+          <%= p.date_field :date, label: 'Date of Event', icon: 'calendar' %>
+        </div>
+        <div class='col-md-3'>
+          <%= p.time_field :time, label: 'Time of Event', icon: 'time' %>
+        </div>
+        <div class='col-md-2'>
+          <%= p.text_field :duration, label: 'Duration of Event', placeholder: 'E.g. 2 Hours', icon: 'hourglass' %>
+        </div>
+        <div class='col-md-2'>
+          <%= p.text_field :minpax, label: 'Minimum Pax', icon: 'user' %>
+        </div>
+        <div class='col-md-2'>
+          <%= p.text_field :maxpax, label: 'Maximum Pax', icon: 'user' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= p.text_area :description, label: 'Description', icon:'list-alt', rows: "5" %>
+        </div>
+      </div>
+        <%= p.submit class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

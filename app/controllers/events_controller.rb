@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:create, :new]
   def index
     @events = Event.all
   end
@@ -9,22 +9,20 @@ class EventsController < ApplicationController
   end
 
   def create
-    if user_signed_in?
-      @event = Event.new(event_params)
-      @event.user_id = current_user.id
-      if @event.save
-        flash[:success] = "Event created successfully!"
-        redirect_to events_path
-      else
-        flash[:error] = "There was an error creating the event."
-        render :new
-      end
+    @event = Event.new(event_params)
+    @event.user_id = current_user.id
+    if @event.save
+      flash[:success] = "Event created successfully!"
+      redirect_to events_path
     else
-      flash[:error] = "Please login to create an event!"
-      redirect_to new_user_session_path
+      flash[:danger] = "There was an error creating the event."
+      render :new
     end
   end
 
+  def show
+    @event = Event.find_by_id(params[:id])
+  end
   private
 
   def event_params
