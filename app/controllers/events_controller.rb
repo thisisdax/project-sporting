@@ -44,7 +44,6 @@ class EventsController < ApplicationController
   def show
     @event = Event.find_by_id(params[:id])
     @comments = Comment.where(event_id: @event).order("created_at DESC")
-
   end
 
   def list
@@ -55,10 +54,13 @@ class EventsController < ApplicationController
       @event = Event.all.where.not(user_id: current_user.id).order('created_at DESC')
       @check = 0
     end
+    @tag = Tag.all
   end
 
   def recommend
-    @event = Event.all.order('created_at DESC')
+    @filter = Attending.all.where(user_id: current_user.id).select(:event_id).pluck(:event_id)
+    @event = Event.all.where.not(user_id: current_user.id, id: @filter).order('created_at DESC')
+    @tag = Tag.all
     @check = 1
     render :list
   end

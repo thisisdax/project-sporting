@@ -33,12 +33,12 @@
                       <img src="http://lorempixel.com/800/500/" alt="">
                       <div class="caption">
                           <h3> <%= value.name %> </h3>
-                          <p> Sport: <%= value.type_of_sport %> </p>
+                          <p> Sport: <%= value.tags.where("tag_id = ?", "#{value.type_of_sport}").first.value %> </p>
 
                           <p> Date: <%= value.date.to_formatted_s(:long) %> </p>
                           <p> Time: <%= value.time.to_formatted_s(:time) %> </p>
-                          <p> Region: <%= value.region %> </p>
-                          <p> Location: <%= value.location %> </p>
+                          <p> Region: <%= value.tags.where("tag_id = ?", "#{value.region}").first.value %> </p>
+                          <p> Location: <%= value.tags.where("tag_id = ?", "#{value.location}").first.value %> </p>
                           <% counter = 0 %>
                           <% value.attendings.each_with_index do |x, y| %>
                             <% if current_user != nil && x.user_id == current_user.id %>

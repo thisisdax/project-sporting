@@ -1,7 +1,7 @@
-id,user_id,name,description,location,type_of_sport,date,time,duration,minpax,maxpax
-1,1,Basketball,BasketballGame,ChoaChuKang,Basketball,2017-02-16,02:02:00,02:00:00,1,3
-2,2,Soccer,SoccerGame,Boonlay,Soccer,2017-02-16,02:02:00,02:00:00,1,5
-3,1,Tennis,TennisOverTheRainbow,RainbowVille,Tennis,2017-02-15,02:02:00,02:00:00,1,2
-4,1,Rambutan,Fruits,ChoaChuKang,EatManyMany,2017-02-16,02:02:00,02:00:00,1,3
-5,2,Durian,Fruits,Malaysia,EatManyMany,2017-02-16,02:02:00,02:00:00,1,3
-6,1,Volleyball,Pain,Beach,Pain,2017-03-16,02:02:00,02:00:00,1,20
+user_id,name,description,location,type_of_sport,date,time,duration,minpax,maxpax,region
+1,Basketball,BasketballGame,13,52,2017-02-16,02:02:00,02:00:00,1,3,1
+2,Soccer,SoccerGame,15,53,2017-02-16,02:02:00,02:00:00,1,5,2
+1,Tennis,TennisOverTheRainbow,30,54,2017-02-15,02:02:00,02:00:00,1,2,3
+1,Rambutan,Fruits,44,55,2017-02-16,02:02:00,02:00:00,1,3,4
+2,Durian,Fruits,35,56,2017-02-16,02:02:00,02:00:00,1,3,1
+1,Volleyball,Pain,26,57,2017-03-16,02:02:00,02:00:00,1,20,2

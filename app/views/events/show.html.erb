@@ -8,7 +8,9 @@
       </div>
       <div class="col-sm-8 text-left">
         <h1><%= @event.name %></h1>
-        <h2><%= @event.type_of_sport %></h2>
+        <% @event.tags.where(id: @event.type_of_sport).each do |sport| %>
+        <h2><%= sport.value %></h2>
+        <% end %>
         <% @event.users.where(id: @event.user_id).each do |value| %>
         <li>Host: <%=value.email%> </li>
         <% end %>
@@ -29,9 +31,9 @@
         <h3>Description</h3>
         <p><%= @event.description %></p>
       </div>
-
-        <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJ_zKe_xdEQi-gZx-x61gXLRZ9WexJXF8&q=<%= @event.location %>&zoom=16" allowfullscreen></iframe>
-
+      <% @event.tags.where(id: @event.location).each do |location| %>
+        <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJ_zKe_xdEQi-gZx-x61gXLRZ9WexJXF8&q=<%= location.value %>&zoom=16" allowfullscreen></iframe>
+      <% end %>
         <div class="col-md-6">
           <% if current_user == nil %>
             <%= link_to "Join", join_event_path(@event), :method=> :post, :class=>"btn btn-primary" %>
