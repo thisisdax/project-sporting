@@ -28,10 +28,25 @@ class UsersController < ApplicationController
     redirect_to users_profile_edit_path
   end
 
+  def update_image
+    @user = User.find(current_user.id)
+    image = Cloudinary::Uploader.upload(image_params["image"])
+    @user.update("image" => image["url"])
+    if @user.save
+      flash[:success] = "user profile picture updated!"
+    else
+      flash[:warning] = "user picture failed to update!"
+    end
+    redirect_to users_profile_edit_path
+  end
 
   private
   def user_params
     params.permit(:name,:value,:pk)
+  end
+
+  def image_params
+    params["user"]
   end
 
 end

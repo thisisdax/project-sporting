@@ -29219,3 +29219,1164 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 1.8ms)
 
 
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/2" for 127.0.0.1 at 2017-02-15 18:11:41 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+    @user.update(image =>)
+                          ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.5ms)
+Started GET "/profile/edit" for 127.0.0.1 at 2017-02-15 18:11:41 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/profile/edit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (36.9ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.3ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (177.0ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:11:47 +0800
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+    @user.update(image =>)
+                          ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:11:47 +0800
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.9ms)
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+    @user.update(image =>)
+                          ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:33: syntax error, unexpected ')'
+app/controllers/users_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.5ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:14:57 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 8.8ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:15:10 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.4ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:146: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/views/users/edit.html.erb:146: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.5ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:15:41 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:147: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/views/users/edit.html.erb:147: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.9ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:15:51 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:148: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/views/users/edit.html.erb:148: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.3ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:17:05 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:142: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/views/users/edit.html.erb:142: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.7ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:17:51 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+=  bootstrap_form_for(@user do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:142: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected keyword_do, expecting ')'
+app/views/users/edit.html.erb:142: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:18:09 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (7.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (106.1ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 661ms (Views: 644.4ms | ActiveRecord: 14.1ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2017-02-15 18:18:30 +0800
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (18.6ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.8ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:19:00 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2017-02-15 18:19:08 +0800
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (15.2ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.4ms)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:21:48 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 7.5ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:18: syntax error, unexpected tLABEL
+ootstrap_form_for(@user), url: {action: "update_image"} do |
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:18: syntax error, unexpected keyword_do_block, expecting keyword_end
+l: {action: "update_image"} do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:143: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:18: syntax error, unexpected tLABEL
+app/views/users/edit.html.erb:18: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/users/edit.html.erb:143: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:22:01 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:18: syntax error, unexpected tLABEL
+ootstrap_form_for(@user), url: {action: "update_image"} do |
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:18: syntax error, unexpected keyword_do_block, expecting keyword_end
+l: {action: "update_image"} do |f| @output_buffer.safe_appen
+                              ^
+/Users/Agnes/Desktop/GA stuff/project-sporting/app/views/users/edit.html.erb:143: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/edit.html.erb:18: syntax error, unexpected tLABEL
+app/views/users/edit.html.erb:18: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/users/edit.html.erb:143: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:14:in `edit'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.1ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:22:27 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (70.6ms)
+  Rendered partials/_navbar.html.erb (1.3ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 356ms (Views: 346.2ms | ActiveRecord: 6.9ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:22:33 +0800
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/profile/update_image"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (13.2ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.0ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.9ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:22:55 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (26.2ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 58.3ms | ActiveRecord: 10.5ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:23:05 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qKrrCe2e0SUMjSj59IsN6DZLv8/dBLowi7NOREUack+5kdD/JR6PCiUxHE2+jeR0XNV488blNfJNncoy3Bmvg==", "commit"=>"upload image"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, commit
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 1.4ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/users_controller.rb:33:in `update_image'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.3ms)
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:23:12 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qKrrCe2e0SUMjSj59IsN6DZLv8/dBLowi7NOREUack+5kdD/JR6PCiUxHE2+jeR0XNV488blNfJNncoy3Bmvg==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb27f8f0cd0 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12230-l3pii5.jpg>, @original_filename="photo_2017-02-14_12-31-43.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-43.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/users_controller.rb:33:in `update_image'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:23:49 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qKrrCe2e0SUMjSj59IsN6DZLv8/dBLowi7NOREUack+5kdD/JR6PCiUxHE2+jeR0XNV488blNfJNncoy3Bmvg==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb27fcc06f8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12230-ldu122.jpg>, @original_filename="photo_2017-02-14_12-31-43.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-43.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `value' for <ActionController::Parameters {} permitted: true>:ActionController::Parameters
+Did you mean?  value?
+               values):
+  
+app/controllers/users_controller.rb:33:in `update_image'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.8ms)
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:24:23 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qKrrCe2e0SUMjSj59IsN6DZLv8/dBLowi7NOREUack+5kdD/JR6PCiUxHE2+jeR0XNV488blNfJNncoy3Bmvg==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb27ad2fcd8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12230-y35ubc.jpg>, @original_filename="photo_2017-02-14_12-31-43.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-43.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:25:38 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (76.5ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 455ms (Views: 397.4ms | ActiveRecord: 14.5ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:25:43 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XgBGdYWaOfbSVoGsO4RrEsxXjmb5qoYSCweXVLj5yCyCRKqaXrg4jm7wcX7qrHC0vf31egnFAC0AHy1FYp3HWw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f8ed9a92378 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12355-10rihwf.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:32:04 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (62.4ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:32:04 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/edit.html.erb within layouts/application (11.5ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 153ms (Views: 144.6ms | ActiveRecord: 4.7ms)
+
+
+Completed 200 OK in 487ms (Views: 444.8ms | ActiveRecord: 12.5ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:32:09 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M6ct9n6gQAORZIsBKTmyJKjC9I+eUYTXJnlW8XKMAAnv48EZpYJBey3Ce9P4EamC2WiPk24+AugtYezgqOgPfg==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ffae5f01dc8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12498-79f765.jpg>, @original_filename="photo_2017-02-14_12-31-39.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-39.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:33:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (63.0ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 397ms (Views: 353.9ms | ActiveRecord: 12.2ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:33:15 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QIfv+kZqAH/+nyUB3UwyPGBDWTzrxaLsV9/vgRvPtsqcwwMVnUgBB0I51dMMZCmaEekiIBuqJNNcx1WQwau5vQ==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fa5b558b0a8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12553-mvk73d.jpg>, @original_filename="photo_2017-02-14_12-31-26.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-26.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:34:37 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (63.9ms)
+  Rendered partials/_navbar.html.erb (1.5ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 421ms (Views: 375.2ms | ActiveRecord: 12.5ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:34:43 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FRxVi3L8+mUnrcALt4/ZrEW2+wylbYIksHvqZ+MBUkPJWLlkqd77HZsLMNlmp8IKNByAEFUCBBu7Y1B2OWVdNA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcc6184d278 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12618-1l978rc.jpg>, @original_filename="photo_2017-02-14_12-31-26.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-26.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:37:16 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (67.0ms)
+  Rendered partials/_navbar.html.erb (2.0ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+Completed 200 OK in 421ms (Views: 377.5ms | ActiveRecord: 12.4ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:37:21 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Ioki2xkKUNNwY7lWAgZguH2hUUrYA8l0pR2+WT2vqoMzshkt0YoO/FnfjeJIAIkkFz+WdsPiRrZjMzovpKx3Q==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdf302ca0f8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12691-13km575.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:38:52 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (69.7ms)
+  Rendered partials/_navbar.html.erb (1.4ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+Completed 200 OK in 425ms (Views: 377.3ms | ActiveRecord: 12.6ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:38:57 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GMHaDvjcSKHLzU8717xB9oX0TgZntGul3N9dshaPUFnEhTbhI/5J2Xdrv+kGlFpQ9F41Gpfb7ZrXx+ejzOtfLg==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdaaf0aef60 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12756-2teax.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, user, commit
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:41:07 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (78.8ms)
+  Rendered partials/_navbar.html.erb (1.3ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 408ms (Views: 362.6ms | ActiveRecord: 12.0ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:41:13 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pAWMN0DmFXf9HLL8egSgt2B+zpsqusEVqtQ4EPzS1g54QWDYm8QUD0G6Qi6rLLsREdS1h9rVRyqhzIIBJrbZeQ==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f8b64d782e0 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12827-xipki5.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:272)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from block in included at /Users/Agnes/.rvm/gems/ruby-2.4.0/gems/cloudinary-1.4.0/lib/cloudinary/helper.rb:273)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:41:44 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (68.6ms)
+  Rendered partials/_navbar.html.erb (1.1ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+Completed 200 OK in 358ms (Views: 314.5ms | ActiveRecord: 12.9ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:41:50 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W048wKO+lb8ORb/8eF3NPT6yrkL9mT6FF0PSTtCjccOHCtAveJyUx7LjTy6pddabTxjVXg32uLocW2hfCsd+tA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb1ad7a8aa8 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12878-7ark6u.jpg>, @original_filename="photo_2017-02-14_12-31-39.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-39.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `image' for #<ActionController::Parameters:0x007fb1aeb73a38>):
+  
+app/controllers/users_controller.rb:33:in `update_image'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.5ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:42:03 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (33.8ms)
+  Rendered partials/_navbar.html.erb (1.4ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 74.7ms | ActiveRecord: 10.8ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:42:07 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1Fkb+MxpItY2cWYd9IJmxUVXW3+Yd8cl1YpAC2YrRwXFYiAOBOl8+R/NUqm+hI9ZL8mcQ4OWSOcTpMR9/yiaw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb1a9bbadc0 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12878-v5sre5.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4549ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `url' for #<Hash:0x007fb1ad66c220>):
+  
+app/controllers/users_controller.rb:34:in `update_image'
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.4ms)
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:42:34 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (34.6ms)
+  Rendered partials/_navbar.html.erb (1.9ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 70.1ms | ActiveRecord: 11.6ms)
+
+
+Started PATCH "/users/profile/update_image" for 127.0.0.1 at 2017-02-15 18:42:38 +0800
+Processing by UsersController#update_image as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CayPTqXFALYgdraFHiqNpKx75mbK5muX+B/EdAnL4yvV6GOhfucBzpzQRlfPApYC3dGdejqJ7ajzB35l06/sXA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb1ae8aacc0 @tempfile=#<Tempfile:/var/folders/gs/jqfgjg211tggpdscj31cpfg40000gn/T/RackMultipart20170215-12878-v1k68b.jpg>, @original_filename="photo_2017-02-14_12-31-35.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"photo_2017-02-14_12-31-35.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"upload image"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.6ms)[0m  [1m[33mUPDATE "users" SET "image" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["image", "http://res.cloudinary.com/dawhk7nod/image/upload/v1487155361/po4hifavldux74djiaox.jpg"], ["updated_at", 2017-02-15 10:42:41 UTC], ["id", 3]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for UsersController#update_image, rendering head :no_content
+Completed 204 No Content in 3318ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/users/profile/edit" for 127.0.0.1 at 2017-02-15 18:44:04 +0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendings" ON "events"."id" = "attendings"."event_id" WHERE "attendings"."user_id" = $1[0m  [["user_id", 3]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Agnes/.rvm/gems/ruby-2.4.0@global/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+  Rendered users/edit.html.erb within layouts/application (24.6ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 101ms (Views: 64.1ms | ActiveRecord: 9.8ms)
+
+

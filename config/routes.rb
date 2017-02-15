@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #to ensure that user can only edit own profile - ie. no id param in route
   get 'users/profile/edit', to: "users#edit"
   post 'users/profile/update', to: 'users#update'
+  #for image upload
+  patch 'users/profile/update_image', to: 'users#update_image'
 
   resources :events
   get 'events/:id/join', to: 'attendings#redirection'

@@ -15,7 +15,12 @@
     </div>
 
     <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src= <%= @user.image %> ></a>
+      <%= bootstrap_form_for @user, url: {action: "update_image"} do |f| %>
+        <%= f.file_field :image, label: "select image" %>
+        <%= f.submit "upload image" %>
+      <% end %>
     </div>
+
 
 
   </div>
