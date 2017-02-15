@@ -18,7 +18,7 @@ class EventsController < ApplicationController
       end
         @myevents = Event.all.where(user_id: current_user.id)
     end
-    @events_by_date = @events.group_by(&:date)
+    @events_by_date = @latestevents.group_by(&:date)
   end
 
   def new
