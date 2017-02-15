@@ -11,6 +11,7 @@
         <h2><%= @event.type_of_sport %></h2>
         <li>Date: <%= @event.date.to_formatted_s(:long) %></li>
         <li>Time: <%= @event.time.to_formatted_s(:time) %></li>
+        <li>Region: <%= @event.region %></li>
         <li>Location: <%= @event.location %></li>
         <li>Min <%= @event.minpax %> - Max <%= @event.maxpax %> Pax</li>
         <hr>

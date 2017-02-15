@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   patch 'users/profile/update_image', to: 'users#update_image'
 
   resources :events
+  resources :event_tags
   get 'events/:id/join', to: 'attendings#redirection'
   post 'events/:id/join', as: 'join_event', to: 'attendings#join'
   delete 'events/:id/leave', as: 'leave_event', to: 'attendings#leave'
