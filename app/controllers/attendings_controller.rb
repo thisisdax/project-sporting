@@ -21,10 +21,12 @@ class AttendingsController < ApplicationController
         Event.find_by_id(params[:id]).destroy
       else
         @event.user_id = Attending.where(event_id: params[:id]).where.not(user_id: current_user.id).first.user_id
+        @event.save
         Attending.where(event_id: params[:id]).find_by_user_id(current_user.id).destroy
       end
+    else
+      Attending.where(event_id: params[:id]).find_by_user_id(current_user.id).destroy
     end
-
     flash[:success] = "Left the event successfully!"
     redirect_to events_path
   end

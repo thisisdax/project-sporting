@@ -1,0 +1,87 @@
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+          <% if @check == 0 %>
+            <h1 class="page-header">Latest Events
+              <% if current_user != nil %>
+                <small><a href=<%= recommend_event_path %>>/Recommended Events</a></small>
+              <% end %>
+            </h1>
+            <% else %>
+            <h1 class="page-header">Recommended Events
+              <% if current_user != nil %>
+                <small><a href=<%= list_event_path %>>/Latest Events</a></small>
+              <% end %>
+            </h1>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Project One -->
+    <% @event.each do |value| %>
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-responsive" src="http://lorempixel.com/700/300/" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3><%= value.name %></h3>
+            <h4><%= value.location %></h4>
+            <p><%= value.description %></p>
+            <a class="btn btn-primary" href=<%= event_path(value) %>> Details <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+    <% end %>
+    <!-- Project Five -->
+
+    <!-- Pagination -->
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>

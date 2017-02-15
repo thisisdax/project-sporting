@@ -1,22 +1,22 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new]
+  before_action :authenticate_user!, only: [:create, :new, :recommend]
   # before_action :list_attending, only: [:index]
   def index
     if current_user == nil
       if params[:date]
-        @latestevents = Event.where("date >= ?", params[:date])
+        @latestevents = Event.where("date >= ?", params[:date]).first(4)
         @myevents = nil
       else
-        @latestevents = Event.all
+        @latestevents = Event.all.order('created_at DESC').first(4)
         @myevents = nil
       end
     else
       if params[:date]
-        @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date])
+        @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date]).order('created_at DESC').first(4)
       else
-        @latestevents = Event.all.where.not(user_id: current_user.id)
+        @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
       end
-        @myevents = Event.all.where(user_id: current_user.id)
+        @myevents = Event.all.where(user_id: current_user.id).order('created_at DESC').first(4)
     end
     @events_by_date = @latestevents.group_by(&:date)
   end
@@ -40,6 +40,22 @@ class EventsController < ApplicationController
   def show
     @event = Event.find_by_id(params[:id])
     @comments = Comment.where(event_id: @event).order("created_at DESC")
+  end
+
+  def list
+    if current_user == nil
+      @event = Event.all.order('created_at DESC')
+      @check = 0
+    else
+      @event = Event.all.where.not(user_id: current_user.id).order('created_at DESC')
+      @check = 0
+    end
+  end
+
+  def recommend
+    @event = Event.all.order('created_at DESC')
+    @check = 1
+    render :list
   end
   private
 
