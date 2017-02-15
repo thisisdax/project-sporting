@@ -2,8 +2,13 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
   # before_action :list_attending, only: [:index]
   def index
-    @events = Event.all
-
+    if current_user == nil
+      @latestevents = Event.all
+      @myevents = nil
+    else
+      @latestevents = Event.all.where.not(user_id: current_user.id)
+      @myevents = Event.all.where(user_id: current_user.id)
+    end
   end
 
   def new

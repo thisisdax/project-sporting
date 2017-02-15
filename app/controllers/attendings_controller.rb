@@ -1,5 +1,6 @@
 class AttendingsController < ApplicationController
   before_action :join, only: [:redirection]
+  before_action :authenticate_user!
   def join
     @attending = Attending.new
     @attending.event_id = params[:id]
