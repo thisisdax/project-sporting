@@ -8,20 +8,46 @@
       </div>
       <div class="col-sm-8 text-left">
         <h1><%= @event.name %></h1>
-        <h2><%= @event.type_of_sport %></h2>
+        <% @event.tags.where(id: @event.type_of_sport).each do |sport| %>
+        <h2><%= sport.value %></h2>
+        <% end %>
+        <% @event.users.where(id: @event.user_id).each do |value| %>
+        <li>Host: <%=value.email%> </li>
+        <% end %>
         <li>Date: <%= @event.date.to_formatted_s(:long) %></li>
         <li>Time: <%= @event.time.to_formatted_s(:time) %></li>
         <li>Region: <%= @event.region %></li>
         <li>Location: <%= @event.location %></li>
+        <% if @event.minpax == 0 %>
+        <li>Max <%= @event.maxpax %> Pax</li>
+        <%else%>
         <li>Min <%= @event.minpax %> - Max <%= @event.maxpax %> Pax</li>
+        <%end%>
+        <li>Current Attending: <%= @event.attendings.length %></li>
+        <li>Remaining Slots: <%= @event.maxpax - @event.attendings.length %></li>
         <hr>
         <div class="row">
         <div class="col-md-6">
         <h3>Description</h3>
         <p><%= @event.description %></p>
-        </div>
+      </div>
+      <% @event.tags.where(id: @event.location).each do |location| %>
+        <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJ_zKe_xdEQi-gZx-x61gXLRZ9WexJXF8&q=<%= location.value %>&zoom=16" allowfullscreen></iframe>
+      <% end %>
         <div class="col-md-6">
-        <%= link_to "Join", events_path, { :class=>"btn btn-success" } %>
+          <% if current_user == nil %>
+            <%= link_to "Join", join_event_path(@event), :method=> :post, :class=>"btn btn-primary" %>
+          <% else %>
+          <% if @event.attendings.where(user_id: current_user.id).empty? %>
+            <% if @event.maxpax == @event.attendings.length %>
+            <button class="btn btn-static">Full</button>
+            <% else %>
+            <%= link_to "Join", join_event_path(@event), :method=> :post, :class=>"btn btn-primary" %>
+            <% end %>
+          <%else%>
+            <%= link_to "Leave", leave_event_path(@event), :method=> :delete, :class=>"btn btn-primary" %>
+          <% end %>
+          <% end %>
         </div>
         </div>
       </div>
