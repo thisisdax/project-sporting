@@ -3,12 +3,22 @@ class EventsController < ApplicationController
   # before_action :list_attending, only: [:index]
   def index
     if current_user == nil
-      @latestevents = Event.all
-      @myevents = nil
+      if params[:date]
+        @latestevents = Event.where("date >= ?", params[:date])
+        @myevents = nil
+      else
+        @latestevents = Event.all
+        @myevents = nil
+      end
     else
-      @latestevents = Event.all.where.not(user_id: current_user.id)
-      @myevents = Event.all.where(user_id: current_user.id)
+      if params[:date]
+        @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date])
+      else
+        @latestevents = Event.all.where.not(user_id: current_user.id)
+      end
+        @myevents = Event.all.where(user_id: current_user.id)
     end
+    @events_by_date = @latestevents.group_by(&:date)
   end
 
   def new

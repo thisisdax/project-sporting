@@ -20,6 +20,8 @@
         <!-- /.row -->
 
         <!-- Page Features -->
+
+        <span class="col-md-9">
         <% @latestevents.each_with_index do | value, index | %>
           <% if index % 4 == 0 %>
             <div class="row text-center">
@@ -97,6 +99,12 @@
 
         <hr>
         <% end %>
+      </span>
+        <div class="col-lg-12" id="events">
+          <%= calendar do |date| %>
+            <%= link_to "#{date.day}", events_path(:date => "#{date}") %>
+          <% end %>
+        </div>
         <!-- Footer -->
         <footer>
             <div class="row">
