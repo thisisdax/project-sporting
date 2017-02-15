@@ -7,11 +7,19 @@
         <div class="col-md-6">
           <%= p.text_field :name, label: 'Name of Event', icon:'pencil' %>
         </div>
-        <div class='col-md-3'>
-          <%= p.text_field :location, label: 'Location', icon: 'map-marker' %>
+        <div class='col-md-2'>
+          <!-- <%= p.text_field :region, label: 'Region', icon: 'map-marker' %> -->
+
+          <%= p.collection_select :region, Tag.where("tag_category_id = ?", 0), :id, :value, label: 'Region' %>
+
         </div>
-        <div class='col-md-3'>
-          <%= p.text_field :type_of_sport, label: 'Type of Sport', icon: 'tags' %>
+        <div class='col-md-2'>
+          <!-- <%= p.text_field :location, label: 'Location', icon: 'map-marker' %> -->
+          <%= p.collection_select :location, Tag.where("tag_category_id = ?", 1), :id, :value, label: 'Location' %>
+        </div>
+        <div class='col-md-2'>
+          <!-- <%= p.text_field :type_of_sport, label: 'Type of Sport', icon: 'tags' %> -->
+          <%= p.collection_select :type_of_sport, Tag.where("tag_category_id = ?", 2), :id, :value, label: 'Sports' %>
         </div>
         <div class='col-md-3'>
           <%= p.date_field :date, label: 'Date of Event', icon: 'calendar' %>

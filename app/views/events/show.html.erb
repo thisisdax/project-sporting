@@ -14,6 +14,7 @@
         <% end %>
         <li>Date: <%= @event.date.to_formatted_s(:long) %></li>
         <li>Time: <%= @event.time.to_formatted_s(:time) %></li>
+        <li>Region: <%= @event.region %></li>
         <li>Location: <%= @event.location %></li>
         <% if @event.minpax == 0 %>
         <li>Max <%= @event.maxpax %> Pax</li>

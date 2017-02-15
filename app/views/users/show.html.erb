@@ -1,12 +1,26 @@
-
   <div class="container">
     <div class="row">
       <div class="col-sm-10">
         <h1 class=""><%= @user.name %></h1>
-        <% if @user.id != current_user.id %>
-          <a href=<%= "/profile/"+ @user.name + "/message" %> type="button" class="btn btn-info">Send me a message</a>
+        <% if @user.id != current_user.id &&  @follow ==nil %>
+          <%= form_for(@following, :url => followings_path, :method => 'post') do |f| %>
+          <div class="actions">
+            <%= f.hidden_field :follower_id, value: @user.id  %>
+            <%= f.submit 'follow me', :class => 'btn btn-default' %>
+          </div>
+          <% end %>
+
+        <% elsif @user.id != current_user.id && @follow !=nil %>
+          <div class="label label-primary">Followed!!</div>
+          <!-- unfollow link -->
+          <%= form_for(@following, :url => following_path(@follow.id), :method => 'delete') do |f| %>
+          <div class="actions">
+            <%= f.hidden_field :follower_id, value: @user.id  %>
+            <%= f.submit 'unfollow me', :class => 'btn btn-default' %>
+          </div>
+          <% end %>
         <% else %>
-          <%= link_to "edit", edit_user_path(current_user), { :class=>"btn btn-default" } %>
+          <%= link_to "edit", users_profile_edit_path, { :class=>"btn btn-default" } %>
         <% end %>
         <br>
       </div>
@@ -20,8 +34,8 @@
         <!--left col-->
         <ul class="list-group">
             <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><%= @user %></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span><%= @user %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><%= @user.created_at.strftime("%d %B %Y") %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span><%= @user.last_sign_in_at.strftime("%d %B %Y") %></li>
             <li class="list-group-item text-right"><span class="pull-left"><strong class="">Real name</strong></span><%= @user.name %></li>
             <li class="list-group-item text-right"><span class="pull-left"><strong class="">Events Attended: </strong></span><%= @user.events.length %></li>
             <li class="list-group-item text-right"><span class="pull-left"><strong class="">Events Created: </strong></span><%= @user.events.length %></li>
@@ -111,11 +125,7 @@
             </div>
           </div>
           <!-- end row -->
-
-
-
         </div>
       </div>
     </div>
-  </div>
   </div>
