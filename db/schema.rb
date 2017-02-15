@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214053943) do
+ActiveRecord::Schema.define(version: 20170215095046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20170214053943) do
     t.integer  "user_id"
     t.string   "name"
     t.text     "description"
-    t.string   "location"
-    t.string   "type_of_sport"
+    t.integer  "location"
+    t.integer  "type_of_sport"
     t.date     "date"
     t.time     "time"
     t.time     "duration"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170214053943) do
     t.integer  "maxpax"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "region"
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
   end
 
@@ -60,6 +61,13 @@ ActiveRecord::Schema.define(version: 20170214053943) do
     t.integer  "follower_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tag_categories", force: :cascade do |t|

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, only: [:show,:edit]
   resources :events
+  resources :event_tags
   get 'events/:id/join', to: 'attendings#redirection'
   post 'events/:id/join', as: 'join_event', to: 'attendings#join'
   delete 'events/:id/leave', as: 'leave_event', to: 'attendings#leave'

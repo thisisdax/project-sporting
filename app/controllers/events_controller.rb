@@ -28,7 +28,11 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
+
     if @event.save
+      EventTag.create(tag_id: @event.region, event_id: @event.id)
+      EventTag.create(tag_id: @event.location, event_id: @event.id)
+      EventTag.create(tag_id: @event.type_of_sport, event_id: @event.id)
       flash[:success] = "Event created successfully!"
       redirect_to join_event_path(@event.id)
     else
@@ -44,7 +48,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:user_id, :name, :description, :location, :type_of_sport, :date, :time, :duration, :minpax, :maxpax)
+    params.require(:event).permit(:user_id, :name, :description, :region, :location, :type_of_sport, :date, :time, :duration, :minpax, :maxpax)
   end
 
   # def list_attending

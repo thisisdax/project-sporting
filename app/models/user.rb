@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :events, :through => :attendings
   has_many :comments, dependent: :destroy
 
+  has_many :interests
+  has_many :tags, :through => :interests
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
