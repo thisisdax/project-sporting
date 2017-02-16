@@ -21,3 +21,9 @@
 
 # Ignore my cloudinary file
 /config/cloudinary.yml
+
+# Ignore my email file
+/config/email.bashrc
+
+# Ignore application configuration
+/config/application.yml
