@@ -5,3 +5,4 @@ user_id,name,description,location,type_of_sport,date,time,duration,minpax,maxpax
 1,Rambutan,Fruits,44,55,2017-02-16,02:02:00,02:00:00,1,3,4
 2,Durian,Fruits,35,56,2017-02-16,02:02:00,02:00:00,1,3,1
 1,Volleyball,Pain,26,57,2017-03-16,02:02:00,02:00:00,1,20,2
+2,Durian2,Fruits,35,56,2017-02-16,02:02:00,02:00:00,1,3,2

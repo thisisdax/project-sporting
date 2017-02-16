@@ -108,13 +108,29 @@
 
         <hr>
         <% end %>
+
         <div class="col-lg-2" id="events">
           <%= calendar do |date| %>
-            <%= link_to "#{date.day}", events_path(:date => "#{date}") %>
+            <%= link_to "#{date.day}", request.query_parameters.merge({:date => "#{date}"}) %>
           <% end %>
         </div>
       </div>
       </div>
+
+
+
+  
+
+      <%= bootstrap_form_for '', url: events_path(:region), html: { :method => :get, :id=>'region_form', onchange: "$('#region_form').submit();" } do |p| %>
+        <%= p.collection_select :region, Tag.where("tag_category_id = ?", 0), :id, :value, :prompt => "#{current_user.id}" %>
+      <% end %>
+
+
+
+
+
+      <%= link_to "Region", request.query_parameters.merge({:region => 1}) %>
+      <%= link_to "Location", request.query_parameters.merge({:location => 35}) %>
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -123,5 +139,18 @@
                 </div>
             </div>
         </footer>
-
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->

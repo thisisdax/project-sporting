@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :event_tags
   resources :events do
     resources :comments
+  
   end
   #contact is just a test controller because cannot render view without it
 end

@@ -6,20 +6,67 @@ class EventsController < ApplicationController
       if params[:date]
         @latestevents = Event.where("date >= ?", params[:date]).first(4)
         @myevents = nil
+
       else
         @latestevents = Event.all.order('created_at DESC').first(4)
         @myevents = nil
       end
     else
-      if params[:date]
-        @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date]).order('created_at DESC').first(4)
-      else
-        @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
+      # if params[:date]
+      #   @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date]).order('created_at DESC').first(4)
+      #
+      # else
+      #   @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
+      # end
+      @latestevents = Event.all
+
+      if params[:region].present?
+        puts "**************"
+        puts "#{params.inspect}"
+        puts "**************"
+        
+        @latestevents = Event.where("region = ?", params[:region])
       end
+      if params[:location].present?
+        @latestevents = @latestevents.where("location = ?", params[:location])
+      end
+      if params[:date].present?
+        @latestevents = @latestevents.where("date >= ?", params[:date])
+      end
+
+
+
+      # line 27 not supposed to be there
+        # @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
         @myevents = Event.all.where(user_id: current_user.id).order('created_at DESC').first(4)
     end
     @events_by_date = @latestevents.group_by(&:date)
   end
+
+  # def filter
+  #   @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
+  #
+  #   params.each do |z|
+  #
+  #     if params[:location].present?
+  #       @latestevents = Event.where("location = #{params[:location]}")
+  #       # puts "***********"
+  #       # puts "#{@latestevents.inspect}"
+  #       # puts "***********"
+  #     elsif params[:region].present?
+  #       puts "***********BEFORE**********"
+  #       puts "#{@latestevents.inspect}"
+  #       puts "***********BEFORE**********"
+  #       @latestevents = Event.where("region = #{params[:region]}")
+  #       puts "***********"
+  #       puts "#{@latestevents.where("user_id = 1").inspect}"
+  #       puts "***********"
+  #       @latestevents = @latestevents.where("region = #{params[:region]}")
+  #     end
+  #   end
+  #
+  #   render action: :index
+  # end
 
   def new
     @event = Event.new
