@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show,:edit]
+  # get 'users/search', to: "users#index"
+
+  resources :users, only: [:index,:show,:edit]
+
   #to ensure that user can only edit own profile - ie. no id param in route
   get 'users/profile/edit', to: "users#edit"
   post 'users/profile/update', to: 'users#update'

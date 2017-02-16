@@ -1,7 +1,24 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show,:edit, :update]
   skip_before_action :verify_authenticity_token, :only => [:update]
+
+  def index
+    puts "******************"
+    puts "#{@users}"
+    puts "******************"
+    @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+    @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+
+    @users += User.where(["name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+
+    @usersfilter = @users.pluck(:id)
+    @follow = Following.where(:follower_id => @usersfilter, :user_id => current_user.id).first
+    @following = Following.new
+
+  end
+
   def show
+
     @user = User.find_by_id(params[:id])
     #to see if truthie or falsie -> if current user already follow
     @follow = Following.where(:follower_id => params[:id], :user_id => current_user.id).first
