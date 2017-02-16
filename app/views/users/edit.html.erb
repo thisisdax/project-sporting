@@ -74,10 +74,19 @@
       <div class="panel panel-default">
         <div class="panel-heading">Interests</div>
         <div class="panel-body">
-          <ul>
-
-          </ul>
+          <!-- <a href="#" id="type_of_sport" data-type="select2" data-pk="1" data-title="Enter username" class="editable editable-click">superuser</a> -->
+          <!-- <a href="#" id="country" data-type="select2" data-pk="1" data-value="ru" data-url="/post" data-title="Select country"></a> -->
+          <a href="#" id="tags" data-type="select2" data-pk="1" data-title="Enter tags" class="editable editable-click" style="display: inline;">html, javascript</a>
         </div>
+        <!-- <h1 class="">Interests:
+          <a href="#" data-url= <%= users_profile_update_path %> id="sports" data-type="text" data-pk="1" data-title="sports">
+            <% if @user.name == nil %>
+            <%= "please enter name" %>
+            <% else %>
+            <%= @user.name %>
+            <% end %>
+          </a>
+        </h1> -->
       </div>
 
       <div class="panel panel-default target">
@@ -132,10 +141,72 @@
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<%= javascript_include_tag "select2.min.js" %>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
 <script>
   $.fn.editable.defaults.mode = 'inline';
     $('#name').editable();
+    // $('#type_of_sport').editable({
+    //     inputclass: 'input-large',
+    //     select2: {
+    //       tags: true,
+    //         data: ['html', 'javascript', 'css', 'ajax'],
+    //         tokenSeparators: [",", " "]
+    //     }
+    // });
+
+    //local source
+    $('#country').editable({
+        source: [
+              {id: 'gb', text: 'Great Britain'},
+              {id: 'us', text: 'United States'},
+              {id: 'ru', text: 'Russia'}
+           ],
+        select2: {
+           multiple: true
+        }
+    });
+    //remote source (simple)
+    $('#country').editable({
+        source: '/getCountries',
+        select2: {
+            placeholder: 'Select Country',
+            minimumInputLength: 1
+        }
+    });
+    //remote source (advanced)
+    $('#country').editable({
+        select2: {
+            placeholder: 'Select Country',
+            allowClear: true,
+            minimumInputLength: 3,
+            id: function (item) {
+                return item.CountryId;
+            },
+            ajax: {
+                url: '/getCountries',
+                dataType: 'json',
+                data: function (term, page) {
+                    return { query: term };
+                },
+                results: function (data, page) {
+                    return { results: data };
+                }
+            },
+            formatResult: function (item) {
+                return item.CountryName;
+            },
+            formatSelection: function (item) {
+                return item.CountryName;
+            },
+            initSelection: function (element, callback) {
+                return $.get('/getCountryById', { query: element.val() }, function (data) {
+                    callback(data);
+                });
+            }
+        }
+    });
 
 </script>

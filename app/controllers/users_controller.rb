@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(current_user.id)
+    @typeofsportarray = Tag.where("tag_category_id = 2")
     render :edit
   end
 

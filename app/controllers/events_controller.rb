@@ -21,6 +21,10 @@ class EventsController < ApplicationController
     @events_by_date = @latestevents.group_by(&:date)
   end
 
+  def region
+    @latestevents = @latestevents.region(params[:region]) if params[:region].present?
+  end
+
   def new
     @event = Event.new
   end
