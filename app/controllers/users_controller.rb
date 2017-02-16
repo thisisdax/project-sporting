@@ -6,7 +6,14 @@ class UsersController < ApplicationController
     #to see if truthie or falsie -> if current user already follow
     @follow = Following.where(:follower_id => params[:id], :user_id => current_user.id).first
     @following = Following.new
-    # render :show
+
+    current_following_records = @user.followings.select('follower_id')
+    current_follower_records = Following.where(:follower_id => @user.id).select('user_id')
+
+    @current_followings = User.where(:id => current_following_records)
+    @current_followers = User.where(:id => current_follower_records)
+
+    # render :show -> auto show by controller
   end
 
   def edit
