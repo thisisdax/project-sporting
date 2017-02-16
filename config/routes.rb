@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   delete 'events/:id/leave', as: 'leave_event', to: 'attendings#leave'
   get 'events/list', as: 'list_event', to: 'events#list'
   get 'events/list/recommend', as: 'recommend_event', to: 'events#recommend'
+  get 'events/list/myevents', as: 'myevents', to: 'events#myevents'
   root to: 'events#index'
   resources :event_tags
   resources :events do

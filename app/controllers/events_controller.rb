@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new, :recommend]
+  before_action :authenticate_user!, only: [:create, :new, :recommend, :myevents]
   # before_action :list_attending, only: [:index]
   def index
     if current_user == nil
@@ -49,20 +49,32 @@ class EventsController < ApplicationController
   def list
     if current_user == nil
       @event = Event.all.order('created_at DESC')
-      @check = 0
+      @check = 1
     else
       @event = Event.all.where.not(user_id: current_user.id).order('created_at DESC')
-      @check = 0
+      @check = 1
     end
     @tag = Tag.all
+
   end
 
   def recommend
     @filter = Attending.all.where(user_id: current_user.id).select(:event_id).pluck(:event_id)
-    @event = Event.all.where.not(user_id: current_user.id, id: @filter).order('created_at DESC')
+    @follow = Following.all.where(user_id: current_user.id).select(:follower_id)
+    @recommend = Attending.all.where(user_id: @follow).select(:event_id)
+    @event = Event.all.where.not(user_id: current_user.id, id: @filter).where(id: @recommend).order('created_at DESC')
     @tag = Tag.all
-    @check = 1
+    @check = 2
     render :list
+
+  end
+
+  def myevents
+    @event = Event.all.where(user_id: current_user.id)
+    @tag = Tag.all
+    @check = 3
+    render :list
+
   end
 
   private

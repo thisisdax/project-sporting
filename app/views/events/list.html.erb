@@ -1,46 +1,24 @@
 <!-- Page Content -->
 <div class="container">
     <!-- Page Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-          <% if @check == 0 %>
-            <h1 class="page-header">Latest Events
-              <% if current_user != nil %>
-                <small><a href=<%= recommend_event_path %>>/Recommended Events</a></small>
-              <% end %>
-            </h1>
-            <% else %>
-            <h1 class="page-header">Recommended Events
-              <% if current_user != nil %>
-                <small><a href=<%= list_event_path %>>/Latest Events</a></small>
-              <% end %>
-            </h1>
-            <% end %>
-        </div>
-    </div>
     <!-- /.row -->
-
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active" id="one"><%= link_to 'Latest Events', list_event_path, remote: true %></li>
+        <% if current_user != nil %>
+          <li id="two"><%= link_to 'Recommended Events', recommend_event_path, remote: true %></li>
+          <li id="three"><%= link_to 'My Events', myevents_path, remote: true %></li>
+        <% end %>
+    </ul>
+  </div>
+    <div class="container" id="test">
+      <%= render 'event' %>
+    </div>
     <!-- Project One -->
-    <% @event.each do |value| %>
-    <div class="row">
-        <div class="col-md-7">
-            <a href="#">
-                <img class="img-responsive" src="http://lorempixel.com/700/300/" alt="">
-            </a>
-        </div>
-        <div class="col-md-5">
-            <h3><%= value.name %></h3>
-            <% @tag.where(id: value.location).each do |location| %>
-            <h4><%= location.value %></h4>
-            <% end %>
-            <p><%= value.description %></p>
-            <a class="btn btn-primary" href=<%= event_path(value) %>> Details <span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
-    </div>
+
     <!-- /.row -->
 
-    <hr>
-    <% end %>
+
     <!-- Project Five -->
 
     <!-- Pagination -->
