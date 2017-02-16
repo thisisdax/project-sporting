@@ -1,0 +1,13 @@
+$("#one").removeClass('active');
+$("#two").removeClass('active');
+$("#three").removeClass('active');
+if (<%= @check %> === 1) {
+  $("#one").addClass('active');
+} else if (<%= @check %> === 2) {
+  $("#two").addClass('active');
+} else if (<%= @check %> === 3) {
+  $("#three").addClass('active');
+}
+
+$("#test").empty();
+$("#test").append("<%= j render 'event' %>");

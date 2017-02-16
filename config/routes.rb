@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show]
+
+  # get 'users/search', to: "users#index"
+
+  resources :users, only: [:index,:show,:edit]
+
   #to ensure that user can only edit own profile - ie. no id param in route
   get 'users/profile/edit', to: "users#edit"
   post 'users/profile/update', to: 'users#update'
@@ -16,6 +20,7 @@ Rails.application.routes.draw do
   delete 'events/:id/leave', as: 'leave_event', to: 'attendings#leave'
   get 'events/list', as: 'list_event', to: 'events#list'
   get 'events/list/recommend', as: 'recommend_event', to: 'events#recommend'
+  get 'events/list/myevents', as: 'myevents', to: 'events#myevents'
   root to: 'events#index'
   resources :event_tags
   resources :events do

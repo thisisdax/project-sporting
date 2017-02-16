@@ -1,0 +1,19 @@
+<% @following %>
+<% @event.each do |value| %>
+<div class="row">
+    <div class="col-md-7">
+        <a href="#">
+            <img class="img-responsive" src="http://lorempixel.com/700/300/" alt="">
+        </a>
+    </div>
+    <div class="col-md-5">
+        <h3><%= value.name %></h3>
+        <% @tag.where(id: value.location).each do |location| %>
+        <h4><%= location.value %></h4>
+        <% end %>
+        <p><%= value.description %></p>
+        <a class="btn btn-primary" href=<%= event_path(value) %>> Details <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</div>
+<hr>
+<% end %>

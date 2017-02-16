@@ -11,7 +11,7 @@ class FollowingsController < ApplicationController
 
     if @following.save
       flash[:success] = "Successfully followed!"
-      redirect_to user_path(following_params["follower_id"])
+      redirect_to(:back)
     else
       flash[:danger] = "There was an error in following."
       redirect_to(:back)
@@ -27,7 +27,7 @@ class FollowingsController < ApplicationController
     else
       flash[:warning] = "failed to unfollow"
     end
-    redirect_to user_path(following_params["follower_id"])
+    redirect_to(:back)
   end
 
 
