@@ -2,7 +2,7 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+        <!-- <header class="jumbotron hero-spacer">
             <h1>A Warm Welcome!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
             <div class="row">
@@ -11,14 +11,14 @@
             </div>
         </header>
 
-        <hr>
+        <hr> -->
 
         <!-- Title -->
         <div class="row">
         <div class="col-lg-10">
         <div class="row">
             <div class="col-lg-12">
-                <h3><a href=<%= list_event_path %>>Latest Events</a></h3>
+                <h3>Search results:</a></h3>
             </div>
         </div>
         <!-- /.row -->
@@ -36,24 +36,29 @@
                           <h3>Name: <%= link_to "#{results_name}", user_path(value.id) %> </h3>
                           <% results_joined = value.created_at.to_formatted_s(:long)|| "NIL" %>
                           <p>Joined at <%= results_joined %> </p>
-                          <% if value.id != current_user.id &&  @follow ==nil %>
-                            <%= form_for(@following, :url => followings_path, :method => 'post') do |f| %>
-                            <div class="actions">
-                              <%= f.hidden_field :follower_id, value: value.id  %>
-                              <%= f.submit 'follow me', :class => 'btn btn-default' %>
-                            </div>
-                            <% end %>
 
-                          <% elsif value.id != current_user.id && @follow !=nil %>
-                            <div class="label label-primary">Followed!!</div>
-                            <!-- unfollow link -->
-                            <%= form_for(@following, :url => following_path(@follow.id), :method => 'delete') do |f| %>
-                            <div class="actions">
-                              <%= f.hidden_field :follower_id, value: value.id  %>
-                              <%= f.submit 'unfollow me', :class => 'btn btn-default' %>
-                            </div>
+                          <% unless @not_signed_in %>
+                            <% if value.id != current_user.id &&  @hash_of_follower_id_and_follow_id[value.id] == nil %>
+                              <%= form_for(@following, :url => followings_path, :method => 'post') do |f| %>
+                              <div class="actions">
+                                <%= f.hidden_field :follower_id, value: value.id  %>
+                                <%= f.submit 'follow me', :class => 'btn btn-default' %>
+
+                              </div>
+                              <% end %>
+
+                            <% elsif value.id != current_user.id && @hash_of_follower_id_and_follow_id[value.id] %>
+                              <div class="label label-primary">Followed!!</div>
+                              <!-- unfollow link -->
+
+                              <%= form_for(@following, :url => following_path(@hash_of_follower_id_and_follow_id[value.id]), :method => 'delete') do |f| %>
+                              <div class="actions">
+                                <%= f.hidden_field :follower_id, value: value.id  %>
+                                <%= f.submit 'unfollow me', :class => 'btn btn-default' %>
+                              </div>
+                              <% end %>
                             <% end %>
-                            <% end %>
+                          <% end %>
 
 
 
