@@ -2,9 +2,12 @@
   <div class="container-fluid text-center">
     <div class="row content">
       <div class="col-sm-2 sidenav">
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
+        <h3><%= link_to "Attendees", users_path(:search => @event.attendings.pluck(:user_id)) %></h3>
+        <% @event.attendings.each do | value | %>
+        <% User.all.where(id: value.user_id).first(5).each do | listuser | %>
+        <%= link_to listuser.email, user_path(listuser.id) %>
+        <% end %>
+        <% end %>
       </div>
       <div class="col-sm-8 text-left">
         <h1><%= @event.name %></h1>
@@ -24,6 +27,11 @@
         <li>Min <%= @event.minpax %> - Max <%= @event.maxpax %> Pax</li>
         <%end%>
         <li>Current Attending: <%= @event.attendings.length %></li>
+        <% @event.attendings.each do | value | %>
+        <% User.all.where(id: value.user_id).each do | listuser | %>
+        <%= listuser.name %>
+        <% end %>
+        <% end %>
         <li>Remaining Slots: <%= @event.maxpax - @event.attendings.length %></li>
         <hr>
         <div class="row">
@@ -61,9 +69,6 @@
       </div>
     </div>
   </div>
-  things to add :
-  people in the event(left bar)/friends(right bar)
-  google(beside the div class showing all details, store both div into a row)
 
   <h3>This is supposed to be the comments section:</h3>
   <%= render 'comments/comment' %>

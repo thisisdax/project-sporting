@@ -3,18 +3,30 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:update]
 
   def index
-    puts "******************"
-    puts "#{@users}"
-    puts "******************"
-    @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-    @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-
-    @users += User.where(["name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-
-    @usersfilter = @users.pluck(:id)
-    @follow = Following.where(:follower_id => @usersfilter, :user_id => current_user.id).first
-    @following = Following.new
-
+    if current_user != nil
+      @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+      @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+      @users += User.where(["name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+      @users += User.where(id: params[:search]).where.not(id:current_user.id)
+      @users = @users.uniq
+      @usersfilter = @users.pluck(:id)
+      @usersfilter = @usersfilter.uniq
+      @follow = Following.where(:follower_id => @usersfilter, :user_id => current_user.id).first
+      @following = Following.new
+    else
+      @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"])
+      @users += User.where(["email LIKE ?", "%#{params[:search]}%"])
+      @users += User.where(["name LIKE ?", "%#{params[:search]}%"])
+      @users += User.where(id: params[:search])
+      @users = @users.uniq
+      @usersfilter = @users.pluck(:id)
+      @usersfilter = @usersfilter.uniq
+      @follow = Following.where(:follower_id => @usersfilter).first
+      @following = Following.new
+    end
+    @events = Event.where(name: params[:search])
+    @events += Event.where(user_id: params[:search])
+    @events = @events.to_a.uniq
   end
 
   def show
