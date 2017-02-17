@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post 'users/profile/update', to: 'users#update'
   #for image upload
   patch 'users/profile/update_image', to: 'users#update_image'
+  # get 'events/index', as: 'events', to: 'events#index'
   get 'events/:id/join', to: 'attendings#redirection'
   post 'events/:id/join', as: 'join_event', to: 'attendings#join'
   delete 'events/:id/leave', as: 'leave_event', to: 'attendings#leave'

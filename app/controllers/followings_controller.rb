@@ -7,6 +7,7 @@ class FollowingsController < ApplicationController
   end
 
   def create
+
     @following = Following.new(user_id: current_user.id, follower_id: following_params[:follower_id])
 
     if @following.save

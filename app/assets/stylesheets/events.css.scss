@@ -4,7 +4,7 @@
 
 
 
-#events .calender {
+#events .calendar {
   background-color: black;
   border-collapse: collapse;
   width: 100%;
@@ -18,16 +18,16 @@ td, th {
 }
 
 th {
+  text-align: center;
   background: #DDD;
   color: #666;
-  text-align: center;
   width: 14.2857142857143%;
 }
 
 td {
   background: #FFF;
   color: #777;
-  height: 80px;
+  height: 40px;
   vertical-align: top;
   font-size: 16px;
 }

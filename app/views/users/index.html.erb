@@ -42,6 +42,7 @@
                               <%= form_for(@following, :url => followings_path, :method => 'post') do |f| %>
                               <div class="actions">
                                 <%= f.hidden_field :follower_id, value: value.id  %>
+
                                 <%= f.submit 'follow me', :class => 'btn btn-default' %>
 
                               </div>
