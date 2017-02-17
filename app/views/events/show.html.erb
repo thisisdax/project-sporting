@@ -40,6 +40,7 @@
         <p><%= @event.description %></p>
       </div>
       <% @event.tags.where(id: @event.location).each do |location| %>
+
         <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJ_zKe_xdEQi-gZx-x61gXLRZ9WexJXF8&q=<%= location.value %>&zoom=16" allowfullscreen></iframe>
       <% end %>
         <div class="col-md-6">
@@ -58,6 +59,12 @@
           <% end %>
         </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Comments Section:</h3>
+            <%= render 'comments/comment' %>
+          </div>
+        </div>
       </div>
       <div class="col-sm-2 sidenav">
         <div class="well">
@@ -70,10 +77,9 @@
     </div>
   </div>
 
-  <h3>This is supposed to be the comments section:</h3>
-  <%= render 'comments/comment' %>
+
   <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+
   </footer>
 
 </div>

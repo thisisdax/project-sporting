@@ -59,8 +59,15 @@
           <% if index % 4 == 3 || @latestevents.length - 1 == index %>
 
           <div class="col-md-4" id="events">
-            <%= calendar do |date| %>
-              <%= link_to "#{date.day}", events_path(:date => "#{date}") %>
+            <h6 id="month">
+
+              <%= link_to "<", url_for(request.query_parameters.merge({:datedisplay => @date.prev_month})) %>
+              <%= @date.strftime("%B %Y") %>
+              <%= link_to ">", url_for(request.query_parameters.merge({:datedisplay => @date.next_month})) %>
+            </h6>
+            <%= calendar @date do |date| %>
+              <%= link_to "#{date.day}", url_for(request.query_parameters.merge({:date => "#{date}"})) %>
+
             <% end %>
           </div>
 
@@ -119,6 +126,11 @@
 
       </div>
       </div>
+      <%= link_to "Region", url_for(request.query_parameters.merge({:region => 1})) %>
+      <%= link_to "Location", url_for(request.query_parameters.merge({:location => 35})) %>
+
+  
+
         <!-- Footer -->
         <footer>
             <div class="row">

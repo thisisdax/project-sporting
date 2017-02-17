@@ -13,12 +13,17 @@ class EventsController < ApplicationController
     else
       if params[:date]
         @latestevents = Event.all.where.not(user_id: current_user.id).where("date >= ?", params[:date]).order('created_at DESC').first(4)
+      elsif params[:region]
+        puts "YESSSSSSSSSSSSSSSSSSKTKEPOOSDJBSB"
+        @latestevents = Event.where("region = ?", params[:region])
       else
         @latestevents = Event.all.where.not(user_id: current_user.id).order('created_at DESC').first(4)
       end
         @myevents = Event.all.where(user_id: current_user.id).order('created_at DESC').first(4)
     end
     @events_by_date = @latestevents.group_by(&:date)
+    @date = params[:datedisplay] ? Date.parse(params[:datedisplay]) : Date.today
+  
   end
 
   def new
