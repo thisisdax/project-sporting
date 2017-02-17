@@ -99,7 +99,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries= true
 
-  config.action_mailer.default_url_options = { :host => 'sporting-sg@herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'sporting-sg.herokuapp.com' }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
