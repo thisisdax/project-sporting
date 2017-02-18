@@ -3,8 +3,6 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:update]
 
   def index
-
-
     if current_user
       @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
       @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
@@ -19,10 +17,10 @@ class UsersController < ApplicationController
       @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"])
       @users += User.where(["email LIKE ?", "%#{params[:search]}%"])
       @users += User.where(["name LIKE ?", "%#{params[:search]}%"])
-
       @not_signed_in = true
     end
-
+    @events = Event.where(["name LIKE ?", "%#{params[:search]}%"])
+    @events += Event.where(["description LIKE ?", "%#{params[:search]}%"])
   end
 
   def show

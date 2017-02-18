@@ -23,7 +23,6 @@ class EventsController < ApplicationController
     end
     @events_by_date = @latestevents.group_by(&:date)
     @date = params[:datedisplay] ? Date.parse(params[:datedisplay]) : Date.today
-  
   end
 
   def new
