@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @events = Event.where(["name LIKE ?", "%#{params[:search]}%"])
     @events += Event.where(["description LIKE ?", "%#{params[:search]}%"])
   end
+end
 
   def show
 
