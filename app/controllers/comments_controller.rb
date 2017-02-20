@@ -4,19 +4,23 @@ class CommentsController < ApplicationController
   before_action :comment_owner, only: [:destroy, :edit, :update]
 
   def create
-    @comment = @event.comments.create(params[:comment].permit(:message))
+
+    @comment = @event.comments.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.save
-    if @comment.save
-      redirect_to event_path(@event)
-    else
-      render 'new'
+    @comment.save!
+
+    respond_to do |format|
+      format.html { redirect_to @event }
+      format.js #by default, render comments/create.js.erb
     end
   end
 
   def destroy
     @comment.destroy
-    redirect_to event_path(@event)
+    respond_to do |format|
+      format.html { redirect_to @event }
+      format.js
+    end
   end
 
   def edit
@@ -46,5 +50,9 @@ class CommentsController < ApplicationController
       flash[:notice] = "You have no access"
       redirect_to @event
     end
+  end
+
+  def comment_params
+    params.require(:comment).permit(:message)
   end
 end

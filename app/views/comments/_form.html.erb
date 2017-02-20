@@ -1,4 +1,5 @@
-<%= form_for([@event, @event.comments.build]) do |f| %>
-  <%= f.text_area :message %>
-  <%= f.submit %>
+<%= form_for [@event, @event.comments.new], remote: true do |f| %>
+                                              <!-- ^ available for link_to and button_to -->
+  <%= f.text_area :message, placeholder: "Write a comment..." %>
+  <%= f.submit 'Post Comment', class: 'button' %>
 <% end %>
