@@ -21,3 +21,25 @@
 
 en:
   hello: "Hello world"
+
+  errors:
+    format: "%{message}"
+
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            minpax:
+              blank: "Dont forget to add a number for the minimum number of participants"
+
+  errors:
+    format: "%{message}"
+
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            maxpax:
+              blank: "Dont forget to add a number for the maximum number of participants"

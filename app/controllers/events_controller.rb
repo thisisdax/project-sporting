@@ -40,14 +40,14 @@ class EventsController < ApplicationController
       flash[:success] = "Event created successfully!"
       redirect_to join_event_path(@event.id)
     else
-      flash[:danger] = "There was an error creating the event."
+      flash[:danger] = @event.errors.full_messages.to_sentence
       render :new
     end
   end
 
   def show
     @event = Event.find_by_id(params[:id])
-    @comments = Comment.where(event_id: @event).order("created_at DESC")
+    @comments = Comment.where(event_id: @event).order("created_at ASC")
   end
 
   def list
