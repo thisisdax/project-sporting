@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.btn-dax {
+  background-color: hsl(360, 79%, 36%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e73636", endColorstr="#a41313");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e73636), to(#a41313));
+  background-image: -moz-linear-gradient(top, #e73636, #a41313);
+  background-image: -ms-linear-gradient(top, #e73636, #a41313);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e73636), color-stop(100%, #a41313));
+  background-image: -webkit-linear-gradient(top, #e73636, #a41313);
+  background-image: -o-linear-gradient(top, #e73636, #a41313);
+  background-image: linear-gradient(#e73636, #a41313);
+  border-color: #a41313 #a41313 hsl(360, 79%, 31%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}

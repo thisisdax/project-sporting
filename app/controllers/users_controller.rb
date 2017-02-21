@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @events += Event.where(["description LIKE ?", "%#{params[:search]}%"])
   end
 
+
   def show
 
     @user = User.find_by_id(params[:id])
