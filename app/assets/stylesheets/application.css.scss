@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+$navbar-inverse-bg: #11151C;
+$jumbotron-bg: #D66853;
+$thumbnail-bg: #7D4E57;
+
+
+
+.btn-dax {
+  background-color: hsl(360, 79%, 36%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e73636", endColorstr="#a41313");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e73636), to(#a41313));
+  background-image: -moz-linear-gradient(top, #e73636, #a41313);
+  background-image: -ms-linear-gradient(top, #e73636, #a41313);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e73636), color-stop(100%, #a41313));
+  background-image: -webkit-linear-gradient(top, #e73636, #a41313);
+  background-image: -o-linear-gradient(top, #e73636, #a41313);
+  background-image: linear-gradient(#e73636, #a41313);
+  border-color: #a41313 #a41313 hsl(360, 79%, 31%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// body {
+//   background-color: black;
+// }
