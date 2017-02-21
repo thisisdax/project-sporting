@@ -15,7 +15,7 @@ click = ->
 
 
 $(document).ready(click)
-$(document).on('page:change', click)
+# $(document).on('page:change', click)
 
 
 # $(document).on('page:change', remove)
