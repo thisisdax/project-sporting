@@ -7,11 +7,11 @@
         </a>
     </div>
     <div class="col-md-5">
-        <h3><%= value.name %></h3>
+        <h3 style="color: white"><%= value.name %></h3>
         <% @tag.where(id: value.location).each do |location| %>
-        <h4><%= location.value %></h4>
+        <h4 style="color: white"><%= location.value %></h4>
         <% end %>
-        <p><%= value.description %></p>
+        <p style="color: white"><%= value.description %></p>
         <a class="btn btn-primary" href=<%= event_path(value) %>> Details <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 </div>
