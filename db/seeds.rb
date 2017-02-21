@@ -13,6 +13,7 @@ csv.each do |row|
   t = User.new
   t.email = row['email']
   t.password = row['password']
+  t.last_sign_in_at = row['last_sign_in_at']
 
   t.save
   puts "#{t.email} saved"

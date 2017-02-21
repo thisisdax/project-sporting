@@ -3,31 +3,25 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:update]
 
   def index
-    if current_user != nil
-      @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-      @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-      @users += User.where(["name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
-      @users += User.where(id: params[:search]).where.not(id:current_user.id)
-      @users = @users.uniq
-      @usersfilter = @users.pluck(:id)
-      @usersfilter = @usersfilter.uniq
-      @follow = Following.where(:follower_id => @usersfilter, :user_id => current_user.id).first
-      @following = Following.new
-    else
-      @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"])
-      @users += User.where(["email LIKE ?", "%#{params[:search]}%"])
-      @users += User.where(["name LIKE ?", "%#{params[:search]}%"])
-      @users += User.where(id: params[:search])
-      @users = @users.uniq
-      @usersfilter = @users.pluck(:id)
-      @usersfilter = @usersfilter.uniq
-      @follow = Following.where(:follower_id => @usersfilter).first
-      @following = Following.new
-    end
-    @events = Event.where(name: params[:search])
-    @events += Event.where(user_id: params[:search])
-    @events = @events.to_a.uniq
+
+  if current_user
+    @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+    @users += User.where(["email LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+    @users += User.where(["name LIKE ?", "%#{params[:search]}%"]).where.not(id: current_user.id)
+
+    @usersfilter = @users.pluck(:id)
+    @follow = Following.where(:follower_id => @usersfilter, :user_id => current_user.id) #produces an array of entries of people the current user is following
+    @hash_of_follower_id_and_follow_id = Hash[@follow.map{ |c| [c.follower_id, c.id] }]
+    @following = Following.new
+
+
+  else
+    @users = User.where(["first_name LIKE ?", "%#{params[:search]}%"])
+    @users += User.where(["email LIKE ?", "%#{params[:search]}%"])
+    @users += User.where(["name LIKE ?", "%#{params[:search]}%"])
+    @not_signed_in = true
   end
+end
 
   def show
 
@@ -35,7 +29,14 @@ class UsersController < ApplicationController
     #to see if truthie or falsie -> if current user already follow
     @follow = Following.where(:follower_id => params[:id], :user_id => current_user.id).first
     @following = Following.new
-    # render :show
+
+    current_following_records = @user.followings.select('follower_id')
+    current_follower_records = Following.where(:follower_id => @user.id).select('user_id')
+
+    @current_followings = User.where(:id => current_following_records)
+    @current_followers = User.where(:id => current_follower_records)
+
+    # render :show -> auto show by controller
   end
 
   def edit

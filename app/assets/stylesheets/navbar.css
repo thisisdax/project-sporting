@@ -226,3 +226,7 @@ ul.alert-dropdown {
     padding: 5%;
     background-color: #212D40;
 }
+
+image {
+  background-image: url("http://lorempixel.com/800/500/")
+}
